@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "outDir": "./dist",
-    "strict": true
+    "strict": true,
+    "jsx": "react-jsx",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"]
   },
   "exclude": ["node_modules", "dist"]
 }
