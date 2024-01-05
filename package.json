@@ -2,9 +2,6 @@
   "name": "typescript-setup-playground",
   "type": "module",
   "packageManager": "yarn@4.0.2",
-  "scripts": {
-    "webpack-build": "node --loader ts-node/esm node_modules/webpack-cli/bin/cli.js --config webpack.config.ts"
-  },
   "devDependencies": {
     "@types/node": "^20.10.6",
     "@types/react": "^18.2.46",

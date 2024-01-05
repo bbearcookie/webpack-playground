@@ -1,8 +1,9 @@
 const path = require("path");
 
 module.exports = {
-  mode: "production",
-  entry: "./src/webpack/index.ts",
+  mode: "development",
+  entry: "./src/main.tsx",
+
   module: {
     rules: [
       {
@@ -12,9 +13,11 @@ module.exports = {
       },
     ],
   },
+
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
   },
+
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "webpack.bundle.js",
