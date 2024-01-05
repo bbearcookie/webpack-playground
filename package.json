@@ -1,4 +1,7 @@
 {
   "name": "typescript-setup-playground",
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "devDependencies": {
+    "typescript": "^5.3.3"
+  }
 }
