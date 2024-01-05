@@ -2,6 +2,10 @@
   "name": "typescript-setup-playground",
   "type": "module",
   "packageManager": "yarn@4.0.2",
+  "scripts": {
+    "build": "webpack",
+    "dev": "webpack serve"
+  },
   "devDependencies": {
     "@types/node": "^20.10.6",
     "@types/react": "^18.2.46",
