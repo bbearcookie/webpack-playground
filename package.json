@@ -1,5 +1,6 @@
 {
   "name": "typescript-setup-playground",
+  "type": "module",
   "packageManager": "yarn@4.0.2",
   "devDependencies": {
     "@types/react": "^18.2.46",
