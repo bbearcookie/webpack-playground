@@ -1,13 +1,13 @@
 {
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS" // ts-node에서는 CommonJS 방식으로 모듈을 해석하도록 설정 (웹팩 전용)
-    }
-  },
+  // "ts-node": {
+  //   "compilerOptions": {
+  //     "module": "CommonJS" // ts-node에서는 CommonJS 방식으로 모듈을 해석하도록 설정 (웹팩 전용)
+  //   }
+  // },
   "compilerOptions": {
     "outDir": "./dist", // 컴파일된 파일이 저장될 디렉터리
     "module": "ESNext", // 어느 모듈 시스템을 사용하는 환경에서 동작하도록 JS 파일을 컴파일할 것인지 설정 (CJS, ES6, ES2020, ESNext 등)
-    "moduleResolution": "Bundler", // [🚨] 모듈을 해석하는 방식을 설정한다는데.. 잘 이해 못했음. 다만, module에 ES방식을 사용하면 이거 설정 바꿔줘야 JSX가 컴파일됨..
+    "moduleResolution": "Node", // [🚨] 모듈을 해석하는 방식을 설정한다는데.. 잘 이해 못했음. 다만, module에 ES방식을 사용하면 이거 설정 바꿔줘야 JSX가 컴파일됨..
     "lib": ["ES6", "ES2020", "DOM", "DOM.Iterable"], // 빌드에 포함할 타입 선언 파일 목록
 
     "strict": true, // 모든 엄격한 타입 검사 옵션 활성화
