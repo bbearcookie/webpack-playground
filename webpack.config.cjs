@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 
 const isDevelopment = process.env.NODE_ENV !== "production";
 
@@ -23,7 +24,7 @@ module.exports = {
   },
 
   optimization: {
-    minimize: false, // 빌드 결과물 확인하려고 임시로 false 설정
+    minimize: false, // TODO: 빌드 결과물 확인하려고 임시로 false 설정
   },
 
   module: {
@@ -31,7 +32,28 @@ module.exports = {
       {
         test: /\.(tsx|ts)?$/,
         exclude: /node_modules/,
-        use: ["babel-loader", "ts-loader"],
+        use: [
+          {
+            loader: "babel-loader",
+            options: {
+              presets: [
+                [
+                  "@babel/preset-env",
+                  {
+                    targets: "> 0.25%, not dead",
+                    useBuiltIns: "usage",
+                    shippedProposals: true,
+                    corejs: 3,
+                  },
+                ],
+              ],
+              plugins: [
+                isDevelopment && require.resolve("react-refresh/babel"),
+              ].filter(Boolean),
+            },
+          },
+          "ts-loader",
+        ],
       },
     ],
   },
@@ -40,5 +62,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
-  ],
+    isDevelopment && new ReactRefreshWebpackPlugin(),
+  ].filter(Boolean),
 };
