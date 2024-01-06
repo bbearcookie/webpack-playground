@@ -1,5 +1,12 @@
 import Counter from "./components/Counter";
 
+class MyClassHaha {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+}
+
 const App = () => {
   return (
     <div>

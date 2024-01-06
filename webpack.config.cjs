@@ -1,8 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+/**
+ * @type {import("webpack").Configuration}
+ */
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: "./src/main.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -16,12 +19,16 @@ module.exports = {
     hot: true,
   },
 
+  optimization: {
+    minimize: false, // 빌드 결과물 확인하려고 임시로 false 설정
+  },
+
   module: {
     rules: [
       {
         test: /\.(tsx|ts)?$/,
-        use: "ts-loader",
-        exclude: /node-modules/,
+        exclude: /node_modules/,
+        use: ["babel-loader", "ts-loader"],
       },
     ],
   },
