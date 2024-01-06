@@ -55,6 +55,13 @@ module.exports = {
           "ts-loader",
         ],
       },
+      {
+        test: /\.(jpg|png|jpeg|gif)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "static/[name][ext]",
+        },
+      },
     ],
   },
 
