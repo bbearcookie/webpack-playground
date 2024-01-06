@@ -1,15 +1,18 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
+const isDevelopment = process.env.NODE_ENV !== "production";
+
 /**
  * @type {import("webpack").Configuration}
  */
 module.exports = {
-  mode: "production",
+  mode: isDevelopment ? "development" : "production",
   entry: "./src/main.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "webpack.bundle.js",
+    clean: true, // 웹팩 5부터 추가된 옵션으로 clean-webpack-plugin를 어느정도 대체할 수 있게 되었음.
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
