@@ -1,14 +1,15 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
-const Dotenv = require("dotenv-webpack");
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import ReactRefreshWebpackPlugin from "@pmmmwh/react-refresh-webpack-plugin";
+import DotenvWebpackPlugin from "dotenv-webpack";
 
 const isDevelopment = process.env.NODE_ENV !== "production";
+const __dirname = path.resolve(); // __dirname is not defined in ES module scope 에러를 해결하기 위한 코드
 
 /**
  * @type {import("webpack").Configuration}
  */
-module.exports = {
+export default {
   mode: isDevelopment ? "development" : "production",
   entry: "./src/main.tsx",
   output: {
@@ -51,9 +52,7 @@ module.exports = {
                   },
                 ],
               ],
-              plugins: [
-                isDevelopment && require.resolve("react-refresh/babel"),
-              ].filter(Boolean),
+              plugins: [isDevelopment && "react-refresh/babel"].filter(Boolean),
             },
           },
           "ts-loader",
@@ -73,7 +72,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "index.html",
     }),
-    new Dotenv(),
+    new DotenvWebpackPlugin(),
     isDevelopment && new ReactRefreshWebpackPlugin(),
   ].filter(Boolean),
 };
