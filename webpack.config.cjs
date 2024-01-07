@@ -1,13 +1,9 @@
-const fs = require("fs");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin");
 const Dotenv = require("dotenv-webpack");
 
 const isDevelopment = process.env.NODE_ENV !== "production";
-
-const data = fs.readFileSync("./.env", "utf-8");
-console.log(data);
 
 /**
  * @type {import("webpack").Configuration}
@@ -22,6 +18,9 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
+    alias: {
+      "@": path.resolve(__dirname, "src"),
+    },
   },
   devServer: {
     port: 3000,

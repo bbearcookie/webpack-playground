@@ -1,5 +1,5 @@
-import Counter from "./components/Counter";
-import Bear from "./assets/bearbear.jpg";
+import Counter from "@/components/Counter";
+import Bear from "@/assets/bearbear.jpg";
 
 class MyClassHaha {
   name: string;

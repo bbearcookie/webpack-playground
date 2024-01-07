@@ -9,8 +9,13 @@
     "strict": true, // 모든 엄격한 타입 검사 옵션 활성화
     "skipLibCheck": true, // 라이브러리 파일의 타입 검사를 건너뛰도록 설정 (이미 받아온 라이브러리를 검사할 필요 없으니 빌드 속도 향상)
     "esModuleInterop": true, // import React from 'react' 방식으로 임포트할 수 있도록 설정 (이거 안하면 import * as React from 'react' 방식으로 임포트해야 함)
-    "allowSyntheticDefaultImports": true, // [🚨] 웹팩에서 시켜서 우선 했음.
-    "jsx": "react-jsx" // jsx 변환 방식을 React 17 버전부터 사용하는 방식으로 설정
+    "allowSyntheticDefaultImports": true, // default export가 없는 모듈에서도 import x from y 형태로 임포트할 수 있도록 설정
+    "jsx": "react-jsx", // jsx 변환 방식을 React 17 버전부터 사용하는 방식으로 설정
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src"] // 컴파일할 파일 목록
 }
