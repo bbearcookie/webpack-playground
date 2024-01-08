@@ -13,7 +13,7 @@ const App = () => {
   return (
     <div>
       <img src={Bear} alt="assets 곰" />
-      <div className="bg-red-200 w-full h-52">어서오세요! App이에요</div>
+      <div className="flex h-52 w-full bg-red-200">어서오세요! App이에요</div>
       <Counter />
       <Counter />
       <Counter />
