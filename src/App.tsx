@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Counter from "@/components/Counter";
-import Bear from "@/assets/bearbear.jpg";
+import React, { useEffect, useState } from 'react';
+import path from 'path';
+import './main.css';
+import Counter from '@/components/Counter';
+import Bear from './assets/bearbear.jpg';
 
 class MyClassHaha {
   name: string;
