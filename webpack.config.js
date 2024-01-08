@@ -65,6 +65,10 @@ export default {
           filename: "static/[name][ext]",
         },
       },
+      {
+        test: /\.css?$/,
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
     ],
   },
 
