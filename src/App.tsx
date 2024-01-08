@@ -1,3 +1,4 @@
+import React from "react";
 import Counter from "@/components/Counter";
 import Bear from "@/assets/bearbear.jpg";
 
