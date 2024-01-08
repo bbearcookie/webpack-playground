@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Counter from "@/components/Counter";
 import Bear from "@/assets/bearbear.jpg";
 
@@ -10,6 +10,12 @@ class MyClassHaha {
 }
 
 const App = () => {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log(count);
+  }, []);
+
   return (
     <div>
       <img src={Bear} alt="assets 곰" />
