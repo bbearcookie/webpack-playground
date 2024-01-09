@@ -37,7 +37,7 @@
         ],
         "pathGroups": [
           {
-            "pattern": "{react*, react*/**}",
+            "pattern": "react",
             "group": "external",
             "position": "before"
           }
