@@ -10,6 +10,7 @@
     "plugin:import/typescript",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
+    "plugin:react/jsx-runtime", // 'React' must be in scope when using JSX(eslintreact/react-in-jsx-scope) 의 해결책
     "plugin:react-hooks/recommended",
     "prettier" // 반드시 마지막에 위치해서 다른 설정을 덮어쓰도록 해야 함 (prettier와 충돌하는 ESLint 규칙을 끄는 설정)
   ],
