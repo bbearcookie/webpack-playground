@@ -52,6 +52,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react", "virtual:e22c12360af8aaf2edab6d61a3019076c1c9f6e0688533b8222f625845184683e6df1dcc27ad4b1eda1eef4c4f4b0f212c33766c48afa0628fa1258a4a9e782d#npm:7.33.2"],\
           ["eslint-plugin-react-hooks", "virtual:e22c12360af8aaf2edab6d61a3019076c1c9f6e0688533b8222f625845184683e6df1dcc27ad4b1eda1eef4c4f4b0f212c33766c48afa0628fa1258a4a9e782d#npm:4.6.0"],\
           ["html-webpack-plugin", "virtual:e22c12360af8aaf2edab6d61a3019076c1c9f6e0688533b8222f625845184683e6df1dcc27ad4b1eda1eef4c4f4b0f212c33766c48afa0628fa1258a4a9e782d#npm:5.6.0"],\
+          ["husky", "npm:8.0.3"],\
           ["postcss", "npm:8.4.33"],\
           ["postcss-loader", "virtual:e22c12360af8aaf2edab6d61a3019076c1c9f6e0688533b8222f625845184683e6df1dcc27ad4b1eda1eef4c4f4b0f212c33766c48afa0628fa1258a4a9e782d#npm:7.3.4"],\
           ["prettier", "npm:2.8.8"],\
@@ -6618,6 +6619,15 @@ const RAW_RUNTIME_STATE =
         "linkType": "HARD"\
       }]\
     ]],\
+    ["husky", [\
+      ["npm:8.0.3", {\
+        "packageLocation": "../../.yarn/berry/cache/husky-npm-8.0.3-b0b59c5127-10c0.zip/node_modules/husky/",\
+        "packageDependencies": [\
+          ["husky", "npm:8.0.3"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
     ["iconv-lite", [\
       ["npm:0.4.24", {\
         "packageLocation": "../../.yarn/berry/cache/iconv-lite-npm-0.4.24-c5c4ac6695-10c0.zip/node_modules/iconv-lite/",\
@@ -10741,6 +10751,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-plugin-react", "virtual:e22c12360af8aaf2edab6d61a3019076c1c9f6e0688533b8222f625845184683e6df1dcc27ad4b1eda1eef4c4f4b0f212c33766c48afa0628fa1258a4a9e782d#npm:7.33.2"],\
           ["eslint-plugin-react-hooks", "virtual:e22c12360af8aaf2edab6d61a3019076c1c9f6e0688533b8222f625845184683e6df1dcc27ad4b1eda1eef4c4f4b0f212c33766c48afa0628fa1258a4a9e782d#npm:4.6.0"],\
           ["html-webpack-plugin", "virtual:e22c12360af8aaf2edab6d61a3019076c1c9f6e0688533b8222f625845184683e6df1dcc27ad4b1eda1eef4c4f4b0f212c33766c48afa0628fa1258a4a9e782d#npm:5.6.0"],\
+          ["husky", "npm:8.0.3"],\
           ["postcss", "npm:8.4.33"],\
           ["postcss-loader", "virtual:e22c12360af8aaf2edab6d61a3019076c1c9f6e0688533b8222f625845184683e6df1dcc27ad4b1eda1eef4c4f4b0f212c33766c48afa0628fa1258a4a9e782d#npm:7.3.4"],\
           ["prettier", "npm:2.8.8"],\
